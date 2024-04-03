@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("./media/Home Page.png");
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+.button {
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+#video-button {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+#video-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#playlist {
+  flex: 1;
+  max-height: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  margin: 64px 64px 64px 0;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+#playlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#playlist li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  height: 3em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 8px 8px 8px;
+}
+
+.selected {
+  background: #131623;
+}
+
+.play-button {
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.fa-play {
+  width: 20px;
+  height: 20px;
+}
+
+.play-button:hover {
+  background-color: #0056b3;
+}
+
+#playlist li:hover {
+  background: #131623;
+}
+
+video {
+  max-width: 90%;
+  width: full;
+  height: 80%;
+  border: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+  margin: 0 64px 0 64px;
+}

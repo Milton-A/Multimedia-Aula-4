@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Reprodutor de Vídeo com Lista de Reprodução</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="video-container">
+      <video controls id="video-player">
+        <source src="media/B.o.B - Airplanes.mp4" type="video/mp4" />
+        Seu navegador não supora
+      </video>
+     
+    </div>
+    <div id="playlist"><div>
+      <div id="video-button">
+        <button onclick="prevVideo()" class="button"><span><</span></button>
+        <button onclick="nextVideo()" class="button"><span>></span></button>
+      </div>
+      <h2>Lista de Reprodução</h2>
+      <ul id="playlistItems">
+        <li onclick="changeVideo('media/B.o.B - Airplanes.mp4', this)" class="selected">
+          <button class="play-button" onclick="playVideo()"><i class="fas fa-play"></i></button>
+          B.o.B - Airplanes
+        </li>
+        <li onclick="changeVideo('media/Linkin Park - In The End.mp4', this)">
+          Linkin Park - In The End
+        </li>
+        <li onclick="changeVideo('media/Rihanna - Rehab.mp4', this)">
+          Rihanna - Rehab
+        </li>
+        <li onclick="changeVideo('media/The Chainsmokers, ILLENIUM - Takeaway.mp4', this)">
+          The Chainsmokers, ILLENIUM - Takeaway
+        </li>
+        <li onclick="changeVideo('media/Tinie Tempah - Written In The Stars ft. Eric Turner.mp4', this)">
+          Tinie Tempah - Written In The Stars ft. Eric Turner
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
