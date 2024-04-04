@@ -1,6 +1,7 @@
 let playlistItems = document.querySelectorAll("#playlist ul li");
 let videoPlayer = document.getElementById("video-player");
 let pauseImage = document.getElementById("image");
+
 function changeVideo(source, element) {
   videoPlayer.src = source;
   videoPlayer.load();
@@ -9,11 +10,10 @@ function changeVideo(source, element) {
   playlistItems.forEach((item) => {
     item.classList.remove('selected')
     if (item.children.length > 0) {
-
       item.children[0].classList.add("none");
-
     }
   });
+
   element.classList.contains("selected") ? element.classList.remove("selected") : element.classList.add("selected")
   element.children[0].classList.contains("none") ? element.children[0].classList.remove("none") : element.children[0].classList.add("none")
   const newTitle = element.children[1].innerHTML;
