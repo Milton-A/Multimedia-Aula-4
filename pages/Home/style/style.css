@@ -6,19 +6,20 @@ body {
   flex-direction: column;
   height: 100vh;
   background-size: cover;
-  background-image: url("../../../assets/Home\ Page.png");
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(207.79% 131.2% at 94.44% 8.94%, rgba(9, 10, 35, 0.00) 0%, rgba(6, 6, 6, 0.20) 100%), radial-gradient(56.71% 46.67% at 71.77% 80.76%, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(38.37% 19.49% at 8.09% 32.96%, rgba(255, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(247deg, rgba(0, 224, 255, 0.20) 27%, rgba(0, 0, 0, 0.00) 112.25%, rgba(0, 0, 0, 0.20) 112.26%, rgba(0, 118, 134, 0.11) 112.26%), #131623;
+  background-color: #100f12;
+
+  /*background-image: url("../../../assets/Home\ Page.png"); background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(207.79% 131.2% at 94.44% 8.94%, rgba(9, 10, 35, 0.00) 0%, rgba(6, 6, 6, 0.20) 100%), radial-gradient(56.71% 46.67% at 71.77% 80.76%, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(38.37% 19.49% at 8.09% 32.96%, rgba(255, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(247deg, rgba(0, 224, 255, 0.20) 27%, rgba(0, 0, 0, 0.00) 112.25%, rgba(0, 0, 0, 0.20) 112.26%, rgba(0, 118, 134, 0.11) 112.26%), #131623;
 */
 }
 
 .container {
   display: flex;
   flex: 1;
-  padding: 2rem;
+  padding: 4rem;
   gap: 16px;
+  height: 70%;
   align-items: center;
   justify-content: space-between;
-  background-color: #0057b323;
 }
 
 #list {
@@ -49,15 +50,25 @@ body {
   gap: 1rem;
 }
 
+#title {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 6rem;
+}
+
 #video-container {
   border-radius: 12px;
   width: 90%;
   height: 100%;
-
+  flex-direction: column;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2.5rem;
 }
 
 .none {
@@ -82,12 +93,14 @@ body {
   background: rgba(0, 0, 0, 0.47);
   padding: 1.5rem;
   gap: 2px;
+  border: 0.1px solid #ffffff7a;
 }
 
 #playlist ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
 }
 
 #playlist li {
@@ -99,7 +112,12 @@ body {
   cursor: pointer;
   margin-top: 3.5%;
   border-radius: 8px;
-  padding: 0.75rem .75rem .75rem 1.5rem;
+  padding: 0.75rem .75rem .75rem .75rem;
+}
+
+#playlist li img {
+  width: 5rem;
+  border-radius: 12px;
 }
 
 .selected {
@@ -112,6 +130,28 @@ body {
   background-size: cover;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+#image div {
+  padding: 1rem 4rem;
+}
+
+#image div button {
+  width: 7rem;
+  padding-left: 12px;
+  background-color: rgb(179, 25, 25);
+  border-radius: 12px;
+  height: 2.5rem;
+  border: 0.1px solid #fff;
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .play-button {

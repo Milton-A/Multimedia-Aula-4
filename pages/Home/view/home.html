@@ -17,8 +17,14 @@
         <source src="../../../assets/JustinBieber.mp4" type="video/mp4" />
         Seu navegador não supora
       </video>
+
       <div id="image" class="none">
-        <button onclick="playVideo()"><i class="ph ph-play"></i></button>
+        <div>
+          <button onclick="playVideo()"><i class="ph ph-play"></i> Play Now</button>
+        </div>
+      </div>
+      <div id="title">
+        <span>B.o.B - Airplanes</span>
       </div>
     </div>
     <div id="containerPlaylist">
@@ -35,7 +41,8 @@
 
         <ul id="playlistItems">
           <li onclick="changeVideo('../../../assets/Ed Sheeran.mp4', this)" class="selected">
-            B.o.B - Airplanes
+            <img class="none" src="../../../assets/image.png" />
+            <span>B.o.B - Airplanes</span>
           </li>
           <li onclick="changeVideo('media/Linkin Park - In The End.mp4', this)">
             Linkin Park - In The End

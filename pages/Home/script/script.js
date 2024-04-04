@@ -5,8 +5,15 @@ function changeVideo(source, element) {
   videoPlayer.src = source;
   videoPlayer.load();
   videoPlayer.play();
-  playlistItems.forEach((item) => item.classList.remove('selected'));
-  videoPlayer.classList.contains("selected") ? videoPlayer.classList.remove("selected") : videoPlayer.classList.add("selected")
+
+  playlistItems.forEach((item) => {
+    item.classList.remove('selected')
+    if (item.children.length > 0) {
+      item.children[0].classList.add("none");
+    }
+  });
+  element.classList.contains("selected") ? element.classList.remove("selected") : element.classList.add("selected")
+  element.children[0].classList.contains("none") ? element.children[0].classList.remove("none") : element.children[0].classList.add("none")
 }
 
 function prevVideo() {
@@ -33,6 +40,10 @@ function showHiddenVideoAndImage() {
   pauseImage.classList.contains("none") ? pauseImage.classList.remove("none") : pauseImage.classList.add("none")
 }
 videoPlayer.addEventListener('pause', function () { showHiddenVideoAndImage() });
+videoPlayer.addEventListener('play', function () {
+  if (videoPlayer.classList.contains("none")) videoPlayer.classList.remove("none")
+  if (!pauseImage.classList.contains("none")) pauseImage.classList.add("none")
+});
 
 function playVideo() {
   videoPlayer.play();
