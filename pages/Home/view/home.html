@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Reprodutor de Vídeo com Lista de Reprodução</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="video-container">
+      <video controls id="video-player">
+        <source src="../../../assets/JustinBieber.mp4" type="video/mp4" />
+        Seu navegador não supora
+      </video>
+      <div id="image" class="none">
+        <button onclick="playVideo()"><i class="ph ph-play"></i></button>
+      </div>
+    </div>
+    <div id="containerPlaylist">
+      <div id="playlist">
+        <div id="video-button">
+          <button onclick="prevVideo()" class="button">
+            <i class="ph ph-arrow-left"></i>
+          </button>
+          <button onclick="nextVideo()" class="button"><i class="ph ph-arrow-right"></i></button>
+        </div>
+        <div id="list">
+          <span id="listText">Lista de Reprodução</span>
+        </div>
+
+        <ul id="playlistItems">
+          <li onclick="changeVideo('../../../assets/Ed Sheeran.mp4', this)" class="selected">
+            B.o.B - Airplanes
+          </li>
+          <li onclick="changeVideo('media/Linkin Park - In The End.mp4', this)">
+            Linkin Park - In The End
+          </li>
+          <li onclick="changeVideo('media/Rihanna - Rehab.mp4', this)">
+            Rihanna - Rehab
+          </li>
+          <li onclick="changeVideo('media/The Chainsmokers, ILLENIUM - Takeaway.mp4', this)">
+            The Chainsmokers, ILLENIUM - Takeaway
+          </li>
+          <li onclick="changeVideo('media/Tinie Tempah - Written In The Stars ft. Eric Turner.mp4', this)">
+            Tinie Tempah - Written In The Stars ft. Eric Turner
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
